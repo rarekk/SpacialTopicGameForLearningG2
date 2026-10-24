@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>THE QUEST FOR KNOWLEDGE — Mobile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mobile-frame">
+        <div class="status-bar">
+            <span class="status-time">09:41</span>
+            <div class="status-icons">
+                <span>📶</span>
+                <span>🔋</span>
+            </div>
+        </div>
+        
+        <header class="mobile-header">
+            <div class="header-row">
+                <div class="brand-mini">
+                    <span class="brand-mark">⚔</span>
+                    <span class="brand-title">GRIMOIRE</span>
+                </div>
+                <div class="mini-stats">
+                    <span class="mini-pill">🔥 <span id="mStreak">579</span></span>
+                    <span class="mini-pill">★ <span id="mStars">42</span></span>
+                    <span class="mini-pill">⚡ <span id="mEnergy">25</span></span>
+                </div>
+            </div>
+        </header>
+        
+        <nav class="mobile-nav">
+            <button class="m-nav-btn active" data-screen="start" title="Start"><span class="m-nav-icon">⚔</span><span class="m-nav-label">START</span></button>
+            <button class="m-nav-btn" data-screen="catalog" title="Catalog"><span class="m-nav-icon">🖳</span><span class="m-nav-label">CATALOG</span></button>
+            <button class="m-nav-btn" data-screen="arena" title="Arena"><span class="m-nav-icon">ᚱ</span><span class="m-nav-label">ARENA</span></button>
+            <button class="m-nav-btn" data-screen="calendar" title="Calendar"><span class="m-nav-icon">📅</span><span class="m-nav-label">STREAK</span></button>
+            <button class="m-nav-btn" data-screen="shop" title="Shop"><span class="m-nav-icon">🛒</span><span class="m-nav-label">SHOP</span></button>
+            <button class="m-nav-btn" data-screen="profile" title="Profile"><span class="m-nav-icon">🛡</span><span class="m-nav-label">GRIMOIRE</span></button>
+        </nav>
+        <button class="m-theme-toggle" id="mThemeToggle">◐ THEME</button>
+        
+        <main class="mobile-content">
+            <!-- START -->
+            <section id="screen-start" class="m-screen active">
+                <div class="m-start-hero">
+                    <div class="m-hero-glyph">✦</div>
+                    <h1 class="m-hero-headline">THE QUEST<br>FOR<br>KNOWLEDGE</h1>
+                    <p class="m-hero-sub">A practice of recall. A test of resolve.</p>
+                </div>
+                <div class="m-start-banner">
+                    <div class="m-banner-row">
+                        <span class="m-banner-glyph">⚔</span>
+                        <div class="m-banner-text">
+                            <div class="m-banner-title">BEGIN YOUR JOURNEY</div>
+                            <div class="m-banner-sub">One question. One step.</div>
+                        </div>
+                    </div>
+                </div>
+                <button id="mBeginQuestBtn" class="m-cta-btn"><span class="m-cta-inner"><span class="m-cta-text">ENTER ARENA</span><span class="m-cta-arrow">→</span></span></button>
+                <div class="m-streak-card">
+                    <div class="m-streak-row"><span class="m-flame">🔥</span><span class="m-streak-text">579 DAYS ACTIVE</span></div>
+                    <div class="m-streak-detail">Unbroken by sloth</div>
+                </div>
+            </section>
+            
+            <!-- CATALOG -->
+            <section id="screen-catalog" class="m-screen">
+                <div class="m-catalog-header">
+                    <h2 class="m-catalog-title">COURSE CATALOG</h2>
+                    <p class="m-catalog-sub">COMPUTER SCIENCE CURRICULUM</p>
+                </div>
+                <div class="m-catalog-list">
+                    <article class="m-module-card" data-status="in-progress">
+                        <div class="m-module-header"><span class="m-module-glyph">🖳</span><span class="m-module-status">IN PROGRESS</span></div>
+                        <h3 class="m-module-title">DIGITAL LOGIC & CIRCUITS</h3>
+                        <div class="m-module-footer"><span class="m-module-progress">64%</span><button class="m-module-btn" data-go="arena">ENTER</button></div>
+                    </article>
+                    <article class="m-module-card" data-status="mastered">
+                        <div class="m-module-header"><span class="m-module-glyph">🌐</span><span class="m-module-status">MASTERED</span></div>
+                        <h3 class="m-module-title">COMPUTER NETWORKING & SUBNETTING</h3>
+                        <div class="m-module-footer"><span class="m-module-progress">COMPLETE</span><button class="m-module-btn" data-go="arena">REVIEW</button></div>
+                    </article>
+                    <article class="m-module-card" data-status="in-progress">
+                        <div class="m-module-header"><span class="m-module-glyph">⌨</span><span class="m-module-status">IN PROGRESS</span></div>
+                        <h3 class="m-module-title">OBJECT-ORIENTED PYTHON</h3>
+                        <div class="m-module-footer"><span class="m-module-progress">38%</span><button class="m-module-btn" data-go="arena">ENTER</button></div>
+                    </article>
+                    <article class="m-module-card" data-status="locked">
+                        <div class="m-module-header"><span class="m-module-glyph">🗄</span><span class="m-module-status">LOCKED</span></div>
+                        <h3 class="m-module-title">DATABASE ARCHITECTURE</h3>
+                        <div class="m-module-footer"><span class="m-module-progress">LOCKED</span><button class="m-module-btn" disabled>LOCKED</button></div>
+                    </article>
+                </div>
+            </section>
+            
+            <!-- ARENA -->
+            <section id="screen-arena" class="m-screen">
+                <div class="m-arena-header">
+                    <h2 class="m-arena-title">QUIZ ARENA</h2>
+                    <div class="m-arena-stats">
+                        <span>⚡ <span id="mArenaEnergy">25</span>/25</span>
+                        <span>COMBO <span id="mArenaCombo">0</span></span>
+                        <span>TIMER <span id="mArenaTimer">30</span></span>
+                    </div>
+                </div>
+                <div class="m-question-mode-indicator"><span>MODE: </span><span id="mQuestionMode">MULTIPLE CHOICE</span></div>
+                
+                <div id="m-mode-mc" class="m-question-mode active">
+                    <div class="m-question-card">
+                        <p class="m-question-text" id="mMcQuestion">Which logic gate produces output HIGH only when both inputs are HIGH?</p>
+                    </div>
+                    <div class="m-options">
+                        <button class="m-option-btn" data-type="mc" data-correct="false"><span class="m-opt-key">A</span><span class="m-opt-text">OR GATE</span></button>
+                        <button class="m-option-btn" data-type="mc" data-correct="true"><span class="m-opt-key">B</span><span class="m-opt-text">AND GATE</span></button>
+                        <button class="m-option-btn" data-type="mc" data-correct="false"><span class="m-opt-key">C</span><span class="m-opt-text">NOR GATE</span></button>
+                        <button class="m-option-btn" data-type="mc" data-correct="false"><span class="m-opt-key">D</span><span class="m-opt-text">XOR GATE</span></button>
+                    </div>
+                </div>
+                
+                <div id="m-mode-fill" class="m-question-mode">
+                    <div class="m-question-card">
+                        <p class="m-question-text">In Python, the keyword to define a function is <span class="m-blank">____</span>.</p>
+                    </div>
+                    <div class="m-fill-container">
+                        <input type="text" id="mFillInput" class="m-fill-input" placeholder="ANSWER..." autocomplete="off">
+                        <button id="mFillSubmit" class="m-fill-submit">SUBMIT</button>
+                    </div>
+                </div>
+                
+                <div id="m-mode-match" class="m-question-mode">
+                    <div class="m-question-card">
+                        <p class="m-question-text">MATCH TERMS</p>
+                    </div>
+                    <div class="m-match-container">
+                        <div class="m-match-col">
+                            <div class="m-match-item" data-id="1">ROUTER</div>
+                            <div class="m-match-item" data-id="2">SWITCH</div>
+                            <div class="m-match-item" data-id="3">FIREWALL</div>
+                            <div class="m-match-item" data-id="4">DNS</div>
+                        </div>
+                        <div class="m-match-col">
+                            <div class="m-match-def" data-match="1">PACKET FORWARDING</div>
+                            <div class="m-match-def" data-match="2">LOCAL CONNECTIVITY</div>
+                            <div class="m-match-def" data-match="3">TRAFFIC FILTERING</div>
+                            <div class="m-match-def" data-match="4">NAME RESOLUTION</div>
+                        </div>
+                    </div>
+                    <button id="mMatchCheck" class="m-match-check">CHECK</button>
+                </div>
+                
+                <div class="m-arena-feedback" id="mArenaFeedback"></div>
+            </section>
+            
+            <!-- CALENDAR -->
+            <section id="screen-calendar" class="m-screen">
+                <div class="m-calendar-header">
+                    <h2 class="m-calendar-title">STREAK CHRONICLE</h2>
+                    <div class="m-calendar-legend"><span class="m-legend-dot active"></span> ACTIVE <span class="m-legend-dot extinct"></span> LOST</div>
+                </div>
+                <div class="m-calendar-grid" id="mCalendarGrid"></div>
+                <div class="m-calendar-note"><span>🔥</span><span>FED BY CONSISTENCY</span></div>
+            </section>
+            
+            <!-- SHOP -->
+            <section id="screen-shop" class="m-screen">
+                <div class="m-shop-header">
+                    <h2 class="m-shop-title">GUILD SHOP</h2>
+                    <div class="m-shop-currency"><span>★ <span id="mShopStars">42</span></span> <span>✦ <span id="mShopXp">2847</span></span></div>
+                </div>
+                <div class="m-shop-list">
+                    <article class="m-shop-item">
+                        <div class="m-shop-item-header"><span class="m-shop-item-glyph">🛡</span><span class="m-shop-item-price">★ 15</span></div>
+                        <h3 class="m-shop-item-title">LOGIC BADGE</h3>
+                        <button class="m-shop-buy-btn" data-item="logic-badge" data-cost="15">BUY</button>
+                    </article>
+                    <article class="m-shop-item">
+                        <div class="m-shop-item-header"><span class="m-shop-item-glyph">🛡</span><span class="m-shop-item-price">★ 20</span></div>
+                        <h3 class="m-shop-item-title">NETWORK SHIELD</h3>
+                        <button class="m-shop-buy-btn" data-item="network-shield" data-cost="20">BUY</button>
+                    </article>
+                    <article class="m-shop-item">
+                        <div class="m-shop-item-header"><span class="m-shop-item-glyph">✦</span><span class="m-shop-item-price">✦ 500</span></div>
+                        <h3 class="m-shop-item-title">ENERGY REFILL</h3>
+                        <button class="m-shop-buy-btn" data-item="energy-refill" data-cost="500">BUY</button>
+                    </article>
+                </div>
+                <div class="m-shop-inventory"><h3 class="m-inventory-title">INVENTORY</h3><div class="m-inventory-grid" id="mInventoryGrid"><div class="m-inventory-item empty">EMPTY</div></div></div>
+            </section>
+            
+            <!-- PROFILE -->
+            <section id="screen-profile" class="m-screen">
+                <div class="m-profile-hero">
+                    <div class="m-profile-emblem">🛡</div>
+                    <h2 class="m-profile-name">INITIATE</h2>
+                    <p class="m-profile-rank">APPRENTICE OF THE WORD</p>
+                </div>
+                <div class="m-profile-stats">
+                    <div class="m-stat-row"><span class="m-stat-icon">✦</span><div class="m-stat-info"><div class="m-stat-label">XP</div><div class="m-stat-value" id="mProfileXp">2847</div></div></div>
+                    <div class="m-stat-row"><span class="m-stat-icon">★</span><div class="m-stat-info"><div class="m-stat-label">STARS</div><div class="m-stat-value" id="mProfileStars">42</div></div></div>
+                    <div class="m-stat-row"><span class="m-stat-icon">⚡</span><div class="m-stat-info"><div class="m-stat-label">ENERGY</div><div class="m-stat-value"><span id="mProfileEnergy">25</span>/25</div></div></div>
+                    <div class="m-stat-row"><span class="m-stat-icon">🏆</span><div class="m-stat-info"><div class="m-stat-label">BADGES</div><div class="m-stat-value" id="mProfileBadges">2</div></div></div>
+                </div>
+                <div class="m-profile-badges"><h3 class="m-badges-title">SPECIAL BADGES</h3><div class="m-badges-list" id="mSpecialBadges"><div class="m-badge-item earned"><span>🖳</span> LOGIC</div><div class="m-badge-item earned"><span>🌐</span> NETWORK</div></div></div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

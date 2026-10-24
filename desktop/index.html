@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE QUEST FOR KNOWLEDGE — Desktop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-texture" aria-hidden="true"></div>
+    
+    <header class="site-header">
+        <div class="brand">
+            <span class="brand-mark">⚔</span>
+            <div class="brand-text">
+                <span class="brand-title">GRIMOIRE</span>
+                <span class="brand-sub">TECHNOLOGY & WISDOM</span>
+            </div>
+        </div>
+        <div class="header-stats">
+            <div class="stat-pill" title="Current Streak">
+                <span class="stat-icon">🔥</span>
+                <span class="stat-value" id="streakPill">579</span>
+                <span class="stat-label">DAYS ACTIVE</span>
+            </div>
+            <div class="stat-pill" title="Stars Collected">
+                <span class="stat-icon">★</span>
+                <span class="stat-value" id="starsPill">42</span>
+            </div>
+            <div class="stat-pill" title="Total XP">
+                <span class="stat-icon">✦</span>
+                <span class="stat-value" id="xpPill">2847</span>
+            </div>
+            <div class="stat-pill" title="Energy">
+                <span class="stat-icon">⚡</span>
+                <span class="stat-value"><span id="energyPill">25</span>/25</span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="screen-switcher" aria-label="Screen Navigator">
+        <button class="nav-btn active" data-screen="start" title="Start">START</button>
+        <button class="nav-btn" data-screen="catalog" title="Catalog">CATALOG</button>
+        <button class="nav-btn" data-screen="arena" title="Quiz Arena">ARENA</button>
+        <button class="nav-btn" data-screen="calendar" title="Calendar">CALENDAR</button>
+        <button class="nav-btn" data-screen="shop" title="Guild Shop">GUILD SHOP</button>
+        <button class="nav-btn" data-screen="profile" title="Profile">GRIMOIRE</button>
+        <button class="theme-toggle" id="themeToggle" title="Toggle Light/Dark Mode">◐ THEME</button>
+    </nav>
+
+    <main class="viewport">
+        <!-- START SCREEN -->
+        <section id="screen-start" class="screen active">
+            <div class="start-grid">
+                <div class="start-hero">
+                    <div class="hero-marginal">
+                        <span class="marginal-note">ᚱ</span>
+                        <span class="marginal-text">THE FIRST LESSON IS HUMILITY</span>
+                    </div>
+                    <h1 class="hero-headline">THE QUEST<br>FOR<br>KNOWLEDGE</h1>
+                    <div class="hero-divider"></div>
+                    <p class="hero-sub">A practice of recall. A test of resolve. Forged through repetition.</p>
+                </div>
+                <div class="start-panel">
+                    <div class="start-banner">
+                        <div class="banner-row">
+                            <span class="banner-glyph">⚔</span>
+                            <div class="banner-text">
+                                <div class="banner-title">BEGIN YOUR JOURNEY</div>
+                                <div class="banner-sub">One question. One choice. One step forward.</div>
+                            </div>
+                            <span class="banner-glyph">🖳</span>
+                        </div>
+                    </div>
+                    <button id="beginQuestBtn" class="cta-button">
+                        <span class="cta-inner">
+                            <span class="cta-text">ENTER ARENA</span>
+                            <span class="cta-arrow">→</span>
+                        </span>
+                        <span class="cta-sheen"></span>
+                    </button>
+                    <div class="streak-card">
+                        <div class="streak-header">
+                            <span class="flame">🔥</span>
+                            <span class="streak-big" id="streakBig">579 DAYS ACTIVE</span>
+                        </div>
+                        <div class="streak-detail">Unbroken by sloth. Strengthened by discipline.</div>
+                    </div>
+                    <div class="marginal-block">
+                        <span class="marginal-note">✦</span>
+                        <span class="marginal-text">MANA RENEWS WITH CONSECUTIVE CORRECT ANSWERS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATALOG SCREEN -->
+        <section id="screen-catalog" class="screen">
+            <div class="catalog-layout">
+                <header class="catalog-header">
+                    <div>
+                        <h2 class="catalog-title">COURSE CATALOG</h2>
+                        <p class="catalog-sub">SELF-DIRECTED COMPUTER SCIENCE CURRICULUM</p>
+                    </div>
+                    <div class="catalog-marginal">
+                        <span class="marginal-note">🌐</span>
+                        <span class="marginal-text">CHOOSE YOUR PATH • LEARN AT YOUR PACE</span>
+                    </div>
+                </header>
+                <div class="catalog-grid">
+                    <article class="module-card" data-status="in-progress">
+                        <div class="module-header">
+                            <span class="module-glyph">🖳</span>
+                            <span class="module-status">IN PROGRESS</span>
+                        </div>
+                        <h3 class="module-title">DIGITAL LOGIC & CIRCUITS</h3>
+                        <p class="module-desc">Boolean algebra, gates, combinational & sequential logic</p>
+                        <div class="module-footer">
+                            <span class="module-progress">PROGRESS: 64%</span>
+                            <button class="module-btn" data-go="arena">ENTER ARENA</button>
+                        </div>
+                    </article>
+                    <article class="module-card" data-status="mastered">
+                        <div class="module-header">
+                            <span class="module-glyph">🌐</span>
+                            <span class="module-status">MASTERED</span>
+                        </div>
+                        <h3 class="module-title">COMPUTER NETWORKING & SUBNETTING</h3>
+                        <p class="module-desc">OSI model, IP addressing, routing, subnet calculations</p>
+                        <div class="module-footer">
+                            <span class="module-progress">COMPLETE</span>
+                            <button class="module-btn" data-go="arena">REVIEW</button>
+                        </div>
+                    </article>
+                    <article class="module-card" data-status="in-progress">
+                        <div class="module-header">
+                            <span class="module-glyph">⌨</span>
+                            <span class="module-status">IN PROGRESS</span>
+                        </div>
+                        <h3 class="module-title">OBJECT-ORIENTED PYTHON PROGRAMMING</h3>
+                        <p class="module-desc">Classes, inheritance, encapsulation, polymorphism</p>
+                        <div class="module-footer">
+                            <span class="module-progress">PROGRESS: 38%</span>
+                            <button class="module-btn" data-go="arena">ENTER ARENA</button>
+                        </div>
+                    </article>
+                    <article class="module-card" data-status="locked">
+                        <div class="module-header">
+                            <span class="module-glyph">🗄</span>
+                            <span class="module-status">LOCKED</span>
+                        </div>
+                        <h3 class="module-title">DATABASE ARCHITECTURE</h3>
+                        <p class="module-desc">Relational models, normalization, SQL, indexing</p>
+                        <div class="module-footer">
+                            <span class="module-progress">REQUIREMENTS: COMPLETE LOGIC MODULE</span>
+                            <button class="module-btn" disabled>LOCKED</button>
+                        </div>
+                    </article>
+                    <article class="module-card" data-status="in-progress">
+                        <div class="module-header">
+                            <span class="module-glyph">ᚱ</span>
+                            <span class="module-status">IN PROGRESS</span>
+                        </div>
+                        <h3 class="module-title">ALGORITHMS & DATA STRUCTURES</h3>
+                        <p class="module-desc">Arrays, stacks, queues, recursion, complexity analysis</p>
+                        <div class="module-footer">
+                            <span class="module-progress">PROGRESS: 21%</span>
+                            <button class="module-btn" data-go="arena">ENTER ARENA</button>
+                        </div>
+                    </article>
+                    <article class="module-card" data-status="locked">
+                        <div class="module-header">
+                            <span class="module-glyph">✦</span>
+                            <span class="module-status">LOCKED</span>
+                        </div>
+                        <h3 class="module-title">OPERATING SYSTEMS FUNDAMENTALS</h3>
+                        <p class="module-desc">Processes, memory, scheduling, file systems</p>
+                        <div class="module-footer">
+                            <span class="module-progress">REQUIREMENTS: NETWORKING</span>
+                            <button class="module-btn" disabled>LOCKED</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ARENA SCREEN -->
+        <section id="screen-arena" class="screen">
+            <div class="arena-header">
+                <div>
+                    <h2 class="arena-title">HIGH-CHALLENGE QUIZ ARENA</h2>
+                    <p class="arena-sub">MULTIPLE CHOICE • FILL-IN-THE-BLANK • MATCHING GAME</p>
+                </div>
+                <div class="arena-stats">
+                    <div class="arena-stat">
+                        <span class="arena-stat-label">MANA</span>
+                        <div class="arena-energy-bar"><div id="arenaEnergyBar" class="arena-energy-fill" style="width: 100%"></div></div>
+                        <span class="arena-stat-value"><span id="arenaEnergy">25</span>/25</span>
+                    </div>
+                    <div class="arena-stat">
+                        <span class="arena-stat-label">COMBO</span>
+                        <span class="arena-stat-value" id="arenaCombo">0 IN A ROW</span>
+                    </div>
+                    <div class="arena-stat">
+                        <span class="arena-stat-label">TIMER</span>
+                        <span class="arena-stat-value" id="arenaTimer">30</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="arena-content">
+                <div class="question-mode-indicator">
+                    <span class="mode-label">QUESTION MODE:</span>
+                    <span class="mode-value" id="questionMode">MULTIPLE CHOICE</span>
+                </div>
+                
+                <!-- Multiple Choice -->
+                <div id="mode-mc" class="question-mode active">
+                    <div class="question-card">
+                        <p class="question-text" id="mcQuestion">Which logic gate produces output HIGH only when both inputs are HIGH?</p>
+                        <div class="options-grid">
+                            <button class="option-btn" data-type="mc" data-correct="false"><span class="opt-key">A</span><span class="opt-text">OR GATE</span></button>
+                            <button class="option-btn" data-type="mc" data-correct="true"><span class="opt-key">B</span><span class="opt-text">AND GATE</span></button>
+                            <button class="option-btn" data-type="mc" data-correct="false"><span class="opt-key">C</span><span class="opt-text">NOR GATE</span></button>
+                            <button class="option-btn" data-type="mc" data-correct="false"><span class="opt-key">D</span><span class="opt-text">XOR GATE</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fill in the Blank -->
+                <div id="mode-fill" class="question-mode">
+                    <div class="question-card">
+                        <p class="question-text" id="fillQuestion">In Python, the keyword used to define a function is <span class="blank">____</span>.</p>
+                        <div class="fill-input-container">
+                            <input type="text" id="fillInput" class="fill-input" placeholder="TYPE YOUR ANSWER..." autocomplete="off">
+                            <button id="fillSubmit" class="fill-submit">SUBMIT</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Matching Game -->
+                <div id="mode-match" class="question-mode">
+                    <div class="question-card">
+                        <p class="question-text">MATCH THE TECHNICAL TERM TO ITS DEFINITION</p>
+                        <div class="match-container">
+                            <div class="match-column">
+                                <div class="match-item" data-id="1">ROUTER</div>
+                                <div class="match-item" data-id="2">SWITCH</div>
+                                <div class="match-item" data-id="3">FIREWALL</div>
+                                <div class="match-item" data-id="4">DNS</div>
+                            </div>
+                            <div class="match-column">
+                                <div class="match-def" data-match="1">FORWARDS PACKETS BETWEEN NETWORKS</div>
+                                <div class="match-def" data-match="2">CONNECTS DEVICES WITHIN A NETWORK</div>
+                                <div class="match-def" data-match="3">FILTERS NETWORK TRAFFIC FOR SECURITY</div>
+                                <div class="match-def" data-match="4">RESOLVES DOMAIN NAMES TO IP ADDRESSES</div>
+                            </div>
+                        </div>
+                        <button id="matchCheck" class="match-check">CHECK MATCHES</button>
+                    </div>
+                </div>
+                
+                <div class="arena-feedback" id="arenaFeedback"></div>
+            </div>
+        </section>
+
+        <!-- CALENDAR SCREEN -->
+        <section id="screen-calendar" class="screen">
+            <div class="calendar-layout">
+                <header class="calendar-header">
+                    <div>
+                        <h2 class="calendar-title">STREAK CHRONICLE</h2>
+                        <p class="calendar-sub">Days inscribed. Discipline recorded.</p>
+                    </div>
+                    <div class="calendar-legend">
+                        <div class="legend-item"><span class="legend-dot active"></span> ACTIVE</div>
+                        <div class="legend-item"><span class="legend-dot extinct"></span> EXTINGUISHED</div>
+                    </div>
+                </header>
+                <div class="calendar-grid" id="calendarGrid"></div>
+                <div class="calendar-marginal">
+                    <span class="marginal-note">🔥</span>
+                    <span class="marginal-text">THE FLAME DOES NOT EXTEND ITSELF. IT IS FED BY CONSISTENCY.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SHOP SCREEN -->
+        <section id="screen-shop" class="screen">
+            <div class="shop-layout">
+                <header class="shop-header">
+                    <div>
+                        <h2 class="shop-title">GUILD SHOP</h2>
+                        <p class="shop-sub">EXCHANGE RESOURCES FOR RARE ITEMS</p>
+                    </div>
+                    <div class="shop-currency">
+                        <span class="currency-item">★ <span id="shopStars">42</span></span>
+                        <span class="currency-item">✦ <span id="shopXp">2847</span></span>
+                        <span class="currency-item">⚡ <span id="shopEnergy">25</span></span>
+                    </div>
+                </header>
+                <div class="shop-grid">
+                    <article class="shop-item">
+                        <div class="shop-item-header">
+                            <span class="shop-item-glyph">🛡</span>
+                            <span class="shop-item-price">★ 15</span>
+                        </div>
+                        <h3 class="shop-item-title">MASTER OF LOGIC BADGE</h3>
+                        <p class="shop-item-desc">Rare fantasy-tech emblem for logic mastery</p>
+                        <button class="shop-buy-btn" data-item="logic-badge" data-cost="15">PURCHASE</button>
+                    </article>
+                    <article class="shop-item">
+                        <div class="shop-item-header">
+                            <span class="shop-item-glyph">🛡</span>
+                            <span class="shop-item-price">★ 20</span>
+                        </div>
+                        <h3 class="shop-item-title">NETWORK GUARDIAN SHIELD</h3>
+                        <p class="shop-item-desc">Protective ward for networking prowess</p>
+                        <button class="shop-buy-btn" data-item="network-shield" data-cost="20">PURCHASE</button>
+                    </article>
+                    <article class="shop-item">
+                        <div class="shop-item-header">
+                            <span class="shop-item-glyph">✦</span>
+                            <span class="shop-item-price">✦ 500</span>
+                        </div>
+                        <h3 class="shop-item-title">ENERGY REFILL</h3>
+                        <p class="shop-item-desc">Restore full mana to 25/25</p>
+                        <button class="shop-buy-btn" data-item="energy-refill" data-cost="500">PURCHASE</button>
+                    </article>
+                    <article class="shop-item">
+                        <div class="shop-item-header">
+                            <span class="shop-item-glyph">🖳</span>
+                            <span class="shop-item-price">★ 30</span>
+                        </div>
+                        <h3 class="shop-item-title">CIRCUIT RUNE INSCRIPTION</h3>
+                        <p class="shop-item-desc">Ancient runic pattern for digital mastery</p>
+                        <button class="shop-buy-btn" data-item="circuit-rune" data-cost="30">PURCHASE</button>
+                    </article>
+                </div>
+                <div class="shop-inventory">
+                    <h3 class="inventory-title">INVENTORY</h3>
+                    <div class="inventory-grid" id="inventoryGrid">
+                        <div class="inventory-item empty">EMPTY</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROFILE SCREEN -->
+        <section id="screen-profile" class="screen">
+            <div class="profile-grid">
+                <div class="profile-hero">
+                    <div class="profile-emblem">🛡</div>
+                    <h2 class="profile-name">INITIATE GRIMOIREKEEPER</h2>
+                    <p class="profile-rank">RANK: APPRENTICE OF THE WORD</p>
+                </div>
+                <div class="stats-grid">
+                    <article class="stat-card">
+                        <div class="stat-card-icon">✦</div>
+                        <div class="stat-card-label">TOTAL XP</div>
+                        <div class="stat-card-value" id="profileXp">2847</div>
+                        <div class="stat-card-sub">INSCRIBED IN THE TOME</div>
+                    </article>
+                    <article class="stat-card">
+                        <div class="stat-card-icon">★</div>
+                        <div class="stat-card-label">STARS COLLECTED</div>
+                        <div class="stat-card-value" id="profileStars">42</div>
+                        <div class="stat-card-sub">GLEANED FROM TRIALS</div>
+                    </article>
+                    <article class="stat-card">
+                        <div class="stat-card-icon">⚡</div>
+                        <div class="stat-card-label">CURRENT ENERGY</div>
+                        <div class="stat-card-value"><span id="profileEnergy">25</span>/25</div>
+                        <div class="stat-card-sub">MANA AT YOUR DISPOSAL</div>
+                    </article>
+                    <article class="stat-card">
+                        <div class="stat-card-icon">🏆</div>
+                        <div class="stat-card-label">BADGES</div>
+                        <div class="stat-card-value" id="profileBadges">2</div>
+                        <div class="stat-card-sub">SEALS EARNED</div>
+                    </article>
+                </div>
+                <div class="profile-badges">
+                    <h3 class="badges-title">SPECIAL BADGES SHOWCASE</h3>
+                    <div class="badges-grid" id="specialBadgesGrid">
+                        <div class="badge-item earned"><span class="badge-glyph">🖳</span><span class="badge-name">LOGIC ADEPT</span></div>
+                        <div class="badge-item earned"><span class="badge-glyph">🌐</span><span class="badge-name">NETWORK WARDEN</span></div>
+                    </div>
+                </div>
+                <div class="profile-marginal">
+                    <span class="marginal-note">ᚱ</span>
+                    <span class="marginal-text">KNOWLEDGE IS THE ONLY TREASURE THAT MULTIPLIES WHEN SHARED</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <span class="footer-text">FORGED IN PARCHMENT & STEEL • WARM ANALOGUE FANTASY MINIMAL</span>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
